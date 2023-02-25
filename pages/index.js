@@ -5,8 +5,7 @@ import { Flex, Button, Text, Box } from '@chakra-ui/react';
 
 import { baseUrl, fetchApi } from '../utils/fetchApi';
 import Property from '../components/Property';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+
 
 const Banner = ({ purpose, title1, title2, desc1, desc2, buttonText, linkName, imageUrl }) => (
   <Flex flexWrap="wrap" justifyContent="center" alignItems="center" m="10">
@@ -31,8 +30,7 @@ export default function Home({ propertyForSale, propertyForRent }) {
         <title>Realestate</title>
         <meta name="description" content="Realestate app" />
         <link rel="icon" href="/favicon.ico" />
-      </Head> 
-      <Navbar />
+      </Head>  
       <Box>
         <Banner
           purpose="RENT A HOME"
@@ -60,8 +58,7 @@ export default function Home({ propertyForSale, propertyForRent }) {
         <Flex flexWrap="wrap">
           {propertyForSale.map((property) => <Property property={property} key={property.id} />)}
           </Flex>
-      </Box>
-      <Footer />
+      </Box> 
     </>
   )
 }
